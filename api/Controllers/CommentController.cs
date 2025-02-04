@@ -26,21 +26,30 @@ namespace api.Controllers{
 
         [HttpGet]
         public async Task<IActionResult> GetAll(){
+
+            if(!ModelState.IsValid) return BadRequest(ModelState);
+
             var comment = await _commentRepo.GetAllAsync();
             var commentDto = comment.Select(c => c.ToCommentDto());
             return Ok(commentDto);
         } 
         
         [HttpGet]
-        [Route("{id}")]
+        [Route("{id:int}")]
         public async Task<IActionResult> GetById([FromRoute] int id){
+
+            if(!ModelState.IsValid) return BadRequest(ModelState);
+
             var comment = await _commentRepo.GetByIdAsync(id);
             if(comment == null) return NotFound();
             return Ok(comment.ToCommentDto());
         }
 
-        [HttpPost("{StockId}")]
+        [HttpPost("{StockId:int}")]
         public async Task<IActionResult> Create([FromRoute] int StockId, CreateCommentDto commentDto){
+    
+            if(!ModelState.IsValid) return BadRequest(ModelState);
+
             if(! await _stockRepo.StockExistsAsync(StockId)){
                 return BadRequest("Stock does not exist");
             }
@@ -50,8 +59,11 @@ namespace api.Controllers{
         }
 
         [HttpPut]
-        [Route("{id}")]
+        [Route("{id:int}")]
         public async Task<IActionResult> Update([FromRoute] int id, UpdateCommentDto commentDto){
+            
+            if(!ModelState.IsValid) return BadRequest(ModelState);
+
             var comment = await _commentRepo.UpdateAsync(id, commentDto);
 
             if(comment == null) return NotFound("Comment not found");
@@ -59,8 +71,11 @@ namespace api.Controllers{
         }
 
         [HttpDelete]
-        [Route("{id}")]
+        [Route("{id:int}")]
         public async Task<IActionResult> Delete([FromRoute] int id){
+
+            if(!ModelState.IsValid) return BadRequest(ModelState);
+            
             var comment = await _commentRepo.DeleteAsync(id);
             if(comment == null) return NotFound("Comment not found");
             return Ok(comment.ToCommentDto());

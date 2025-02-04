@@ -142,3 +142,4 @@ D:\projects\c#\testAPI\api\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\projects\c#\testAPI\api\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\projects\c#\testAPI\api\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\projects\c#\testAPI\api\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+D:\projects\c#\testAPI\api\obj\Debug\net8.0\api.sourcelink.json
