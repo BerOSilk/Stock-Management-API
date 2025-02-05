@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projects\\c#\\TestAPI\\api\\api.csproj": {}
+    "D:\\projects\\c#\\testAPI\\api\\api.csproj": {}
   },
   "projects": {
-    "D:\\projects\\c#\\TestAPI\\api\\api.csproj": {
+    "D:\\projects\\c#\\testAPI\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\c#\\TestAPI\\api\\api.csproj",
+        "projectUniqueName": "D:\\projects\\c#\\testAPI\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "D:\\projects\\c#\\TestAPI\\api\\api.csproj",
+        "projectPath": "D:\\projects\\c#\\testAPI\\api\\api.csproj",
         "packagesPath": "C:\\Users\\Baraa AbuKhalil\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\c#\\TestAPI\\api\\obj\\",
+        "outputPath": "D:\\projects\\c#\\testAPI\\api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
