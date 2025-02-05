@@ -48,7 +48,8 @@ namespace api.Repository{
                 var Option = SortingFactory.GetSortingOption(query.SortBy);
                 if(Option != null) stocks = Option.ApplySorting(stocks, query.Descending);
             }
-            return await stocks.ToListAsync();
+            int skipNumber = (query.PageNumber - 1) * query.PageSize;
+            return await stocks.Skip(skipNumber).Take(query.PageSize).ToListAsync();
         }
 
 
