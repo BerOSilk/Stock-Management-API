@@ -143,3 +143,5 @@ D:\projects\c#\testAPI\api\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJ
 D:\projects\c#\testAPI\api\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\projects\c#\testAPI\api\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 D:\projects\c#\testAPI\api\obj\Debug\net8.0\api.sourcelink.json
+D:\projects\c#\TestAPI\api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\projects\c#\TestAPI\api\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

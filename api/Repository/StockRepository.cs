@@ -23,7 +23,7 @@ namespace api.Repository{
 
         public async Task<Stock> CreateAsync(Stock stockModel)
         {
-            await _context.stocks.AddAsync(stockModel);
+            await _context.Stocks.AddAsync(stockModel);
             await _context.SaveChangesAsync();
             return stockModel;
         }
@@ -39,7 +39,7 @@ namespace api.Repository{
 
         public async Task<List<Stock>> GetAllAsync(QueryObject query)
         {
-            var stocks = _context.stocks.Include(c => c.Comments).AsQueryable();
+            var stocks = _context.Stocks.Include(c => c.Comments).AsQueryable();
             var Specifications = FilteringFactory.GetStockFilteringOptions(query);
             foreach(var specfication in Specifications){
                 stocks = specfication.ApplyFiltering(stocks);
@@ -55,12 +55,12 @@ namespace api.Repository{
 
         public async Task<Stock?> GetByIdAsync(int id)
         {
-            return await _context.stocks.Include(c => c.Comments).FirstOrDefaultAsync(s => s.Id == id);
+            return await _context.Stocks.Include(c => c.Comments).FirstOrDefaultAsync(s => s.Id == id);
         }
 
         public Task<bool> StockExistsAsync(int id)
         {
-            return _context.stocks.AnyAsync(s => s.Id == id);
+            return _context.Stocks.AnyAsync(s => s.Id == id);
         }
 
         public async Task<Stock?> UpdateAsync(int id, UpdateStockRequestDto stockDto)
